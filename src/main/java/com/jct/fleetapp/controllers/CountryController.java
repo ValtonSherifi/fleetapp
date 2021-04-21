@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jct.fleetapp.models.Country;
@@ -28,6 +29,7 @@ public class CountryController {
 		model.addAttribute("countries", countryList);
 
 		return "country";
+		  
 	}
 
 	@PostMapping("/countries/addNew")
@@ -36,11 +38,28 @@ public class CountryController {
 
 		return "redirect:/countries";
 	}
-	
-	@RequestMapping("countries/findById")
+
+	@RequestMapping("/countries/findById")
 	@ResponseBody
 	public Optional<Country> findById(int id) {
 		return countryService.findById(id);
-		
+
 	}
+	
+	@RequestMapping(value="/countries/update", method = {RequestMethod.PUT, RequestMethod.GET})
+	public String update(Country country) {
+		
+		countryService.save(country);
+
+		return "redirect:/countries";
+	}
+	
+	@RequestMapping(value="/countries/delete", method = {RequestMethod.DELETE, RequestMethod.GET})
+	public String delete(int id) {
+		
+		countryService.delete(id);
+
+		return "redirect:/countries";
+	}
+
 }
