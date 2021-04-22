@@ -23,7 +23,7 @@ public class State {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private int id;
 	private String name;
 	private String capital;
 	private String code;
@@ -32,15 +32,15 @@ public class State {
 	@JoinColumn(name = "countryid", insertable = false, updatable = false)
 	private Country country;
 
-	private Integer countryid;
+	private int countryid;
 
 	private String details;
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -76,11 +76,11 @@ public class State {
 		this.country = country;
 	}
 
-	public Integer getCountryid() {
+	public int getCountryid() {
 		return countryid;
 	}
 
-	public void setCountryid(Integer countryid) {
+	public void setCountryid(int countryid) {
 		this.countryid = countryid;
 	}
 

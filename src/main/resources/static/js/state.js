@@ -23,6 +23,8 @@ $('document').ready(function(){
 		$('#ddlCountryDetails').val(state.countryid);
 		$('#nameDetails').val(state.name);
 		$('#detailsDetails').val(state.details);
+		$('#codeDetails').val(state.code);
+		$('#capitalDetails').val(state.capital);
 		$('#lastModifiedByDetails').val(state.lastModifiedBy);
 		//$('#lastModifiedDateDetails').val(state.lastModifiedDate.substr(0,19).replace("T"," "));
 	});

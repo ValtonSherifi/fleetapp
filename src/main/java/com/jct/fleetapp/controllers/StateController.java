@@ -22,7 +22,7 @@ public class StateController {
 
 	@Autowired
 	private StateService stateService;
-	
+
 	@Autowired
 	private CountryService countryService;
 
@@ -32,12 +32,12 @@ public class StateController {
 		List<State> stateList = stateService.getStates();
 
 		model.addAttribute("states", stateList);
-		
+
 		List<Country> countryList = countryService.getCountries();
 
 		model.addAttribute("countries", countryList);
 		return "State";
-		  
+
 	}
 
 	@PostMapping("/states/addNew")
@@ -53,18 +53,18 @@ public class StateController {
 		return stateService.findById(id);
 
 	}
-	
-	@RequestMapping(value="/states/update", method = {RequestMethod.PUT, RequestMethod.GET})
+
+	@RequestMapping(value = "/states/update", method = { RequestMethod.PUT, RequestMethod.GET })
 	public String update(State state) {
-		
+
 		stateService.save(state);
 
 		return "redirect:/states";
 	}
-	
-	@RequestMapping(value="/states/delete", method = {RequestMethod.DELETE, RequestMethod.GET})
+
+	@RequestMapping(value = "/states/delete", method = { RequestMethod.DELETE, RequestMethod.GET })
 	public String delete(int id) {
-		
+
 		stateService.delete(id);
 
 		return "redirect:/states";
