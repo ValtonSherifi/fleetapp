@@ -32,7 +32,7 @@ public class InvoiceStatusController {
 		
 		model.addAttribute("invoiceStatus", invoiceStatusList);
 		
-		return "InvoiceStatus";
+		return "invoicesStatus";
 	}
 
 	@PostMapping("/invoiceStatuses/addNew")

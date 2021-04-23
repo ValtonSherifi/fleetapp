@@ -32,7 +32,7 @@ public class EmployeeTypeController {
 		
 		model.addAttribute("employeeTypes", employeeTypeList);
 		
-		return "EmployeeType";
+		return "employeetype";
 	}
 
 	@PostMapping("/employeeTypes/addNew")
