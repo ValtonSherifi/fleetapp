@@ -8,5 +8,9 @@ import com.jct.fleetapp.models.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-
+	
+	//method to find user by username
+	
+	User findByUsername(String username);
+	
 }
