@@ -1,6 +1,7 @@
 package com.jct.fleetapp.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.jct.fleetapp.models.User;
@@ -10,9 +11,16 @@ import com.jct.fleetapp.repositories.UserRepository;
 public class UserService {
 	
 	@Autowired
+	private BCryptPasswordEncoder encoder;
+	
+	@Autowired
 	private UserRepository userRepository;
+	
 
 	public void save(User user) {
+		
+		user.setPassword(encoder.encode(user.getPassword()));
+		
 		userRepository.save(user);
 	}
 
