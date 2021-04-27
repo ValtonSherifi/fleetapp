@@ -30,7 +30,7 @@ public class VehicleModelController {
 
 		List<VehicleModel> vehicleModelList = vehicleModelService.getVehicleModels();
 		
-		model.addAttribute("vehicleModel", vehicleModelList);
+		model.addAttribute("vehicleModels", vehicleModelList);
 		
 		return "VehicleModel";
 	}
