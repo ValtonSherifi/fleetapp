@@ -26,3 +26,18 @@ ___
   1. clone the repository.
   1. open spring tool suite, go to -> `File -> open existing project` and navigate to where u cloned the repository.
 * Run it with spring tool suite and You can go to [www.localhost:8080](https://www.localhost:8080)
+
+---
+
+### Requirements 
+
+1. Register
+2. Login
+
+| Username      | Password      |
+| ------------- |:-------------:|
+| valton        | 1234          |
+| tony          | 1234          |
+
+
+
