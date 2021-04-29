@@ -44,5 +44,24 @@ ___
 ### Samples(application screenshots)
 
 
+this is the main dashboard
+---
+![1 Dashboard](https://user-images.githubusercontent.com/24781579/116547611-6a5e0d00-a8f3-11eb-8bde-9f4baf291be0.png)
+---
+
+Employee directory, we try to add a new Employee
+---
+![2 Add Employe](https://user-images.githubusercontent.com/24781579/116547607-692ce000-a8f3-11eb-9309-97fd3bc46ffd.png)
+---
+
+after we added successfully an employee, we can click on the check button to see wether our employee has an User account, if true, we get more details,like picture, etc.
+---
+![3 Added Employee](https://user-images.githubusercontent.com/24781579/116547609-69c57680-a8f3-11eb-9bc0-4e8effdbbdda.png)
+---
+
+
+
+
+
 
 
